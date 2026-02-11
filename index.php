@@ -81,11 +81,12 @@
     </div>
 </section>
 <!-- WHO ARE WE ENDS-->
-<section class="section-divider">
+<!--NEWS & EVENTS-->
+<section class="section-divider events-news-section-wrapper">
     <div class="container">
         <div class="section-header-flex">
             <div class="section-header-text">
-                <h6 class="section-tag">Know what's coming</h6>
+                <h6 class="section-tag text-white">Know what's coming</h6>
                 <h2 class="display-title">events & <span>News</span></h2>
             </div>
             <div class="main-menu__btn-box alt-button mt-3">
@@ -179,7 +180,10 @@
                                 <div class="event-short-heading">
                                     <h3>Sewing Class</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci autem, quas
-                                        vel iure labore ut blanditiis odio dicta quasi sed.</p>
+                                        vel iure labore ut blanditiis odio dicta quasi sed. Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Quod explicabo quasi hic deserunt quisquam rerum
+                                        nulla, voluptatum, debitis commodi placeat in ab atque assumenda neque veniam
+                                        earum doloribus dicta repellendus.</p>
                                     <div class="main-menu__btn-box alt-button mt-3">
                                         <a href="#" class="primary-btn">
                                             <span class="primary-btn-text">Learn More</span>
@@ -192,14 +196,55 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="second-tab" role="tabpanel" aria-labelledby="profile-tab">2</div>
-                        <div class="tab-pane fade" id="third-tab" role="tabpanel" aria-labelledby="contact-tab">3</div>
+                        <div class="tab-pane fade" id="second-tab" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="event-short-info">
+                                <div class="event-short-heading">
+                                    <h3>English Class</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci autem, quas
+                                        vel iure labore ut blanditiis odio dicta quasi sed. Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Quod explicabo quasi hic deserunt quisquam rerum
+                                        nulla, voluptatum, debitis commodi placeat in ab atque assumenda neque veniam
+                                        earum doloribus dicta repellendus.</p>
+                                    <div class="main-menu__btn-box alt-button mt-3">
+                                        <a href="#" class="primary-btn">
+                                            <span class="primary-btn-text">Learn More</span>
+                                            <span class="primary-btn-icon-box">
+                                                <i class="fas fa-arrow-right">
+                                                </i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="third-tab" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="event-short-info">
+                                <div class="event-short-heading">
+                                    <h3>Test Class</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci autem, quas
+                                        vel iure labore ut blanditiis odio dicta quasi sed. Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Quod explicabo quasi hic deserunt quisquam rerum
+                                        nulla, voluptatum, debitis commodi placeat in ab atque assumenda neque veniam
+                                        earum doloribus dicta repellendus.</p>
+                                    <div class="main-menu__btn-box alt-button mt-3">
+                                        <a href="#" class="primary-btn">
+                                            <span class="primary-btn-text">Learn More</span>
+                                            <span class="primary-btn-icon-box">
+                                                <i class="fas fa-arrow-right">
+                                                </i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!--NEWS & EVENTS-->
 <!--PROJECTS-->
 <div class="section-divider">
     <div class="container">
