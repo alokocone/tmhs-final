@@ -1,0 +1,77 @@
+@media (max-width: 1199px) {
+
+    /* 1. Hide the original header elements */
+    .main-menu__right .main-menu__search-cart-box,
+    .main-menu__right .main-menu__btn-box {
+        display: none !important;
+    }
+
+    /* 2. Show and style the sidenav versions */
+    .mobile-nav__search-cart {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .mobile-nav__btn {
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    /* Ensure icons are visible against sidenav background */
+    .mobile-nav__search-cart .main-menu__search,
+    .mobile-nav__search-cart .main-menu__cart {
+        color: var(--tmhs-white);
+    }
+}
+@media (max-width: 1025px) {
+    .main-menu__right {
+        display: none;
+    }
+}
+@media (max-width: 991px) {}
+
+/* Small Tablets / Large Phones */
+@media (max-width: 768px) {
+    .sliders .item {
+        height: 75vh;
+    }
+
+    .content {
+        transform: translate(20px, -50px);
+    }
+
+    .main-menu__search-cart-box {
+        display: flex;
+        align-items: flex-start;
+    }
+    .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+/* Mobile Phones (Standard) */
+@media (max-width: 575px) {
+    .subheading{
+        letter-spacing: 2px;  
+        white-space: normal;
+    }
+    .heading {
+        font-size: 25px;
+    }
+
+    .search-popup .form-group button {
+        left: 80%;
+    }
+}
+
+/* 6. Small Mobile Phones (iPhone SE / Older devices) */
+@media (max-width: 375px) {
+    .search-popup .form-group button {
+        left: 70%;
+    }
+}
