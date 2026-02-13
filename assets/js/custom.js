@@ -127,17 +127,26 @@
         margin: 0,
         autoplay: true,
         dots: false,
+        nav: true, // Enable navigation
+        navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
         autoplayTimeout: 4500,
         checkVisibility: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false // Keep it off for mobile to avoid layout breaks
             },
             768: {
-                items: 2
+                items: 1,
+                nav: false // Keep it off for mobile to avoid layout breaks
+            },
+            1024: {
+                items: 3,
+                nav: true
             },
             1170: {
-                items: 4
+                items: 4,
+                nav: true
             }
         }
     });

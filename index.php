@@ -325,6 +325,7 @@
     </div>
 </section>
 <!--BECOME A VOLUNTEER ENDS-->
+<!--TEAMS SECTION-->
 <section class="teams section-divider" style="width:100%;">
     <div class="container">
         <div class="section-header-flex">
@@ -342,28 +343,32 @@
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="customers-teams" class="owl-carousel">
-                    <div class="item">
-                        <div class="shadow-effect">
-                            <img class="img-circle" src="assets/images/logo.gif" alt="ankurgupta">
-                            <h2>Sayalay Karuna</h2>
-                            <p class="title">Founder</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="shadow-effect">
-                            <img class="img-circle" src="assets/images/person.jpg" alt="ankurgupta">
-                            <h2>Kohn Liu</h2>
-                            <p class="title">Co-Founder</p>
-                        </div>
-                    </div>
+        <div id="customers-teams" class="owl-carousel">
+            <div class="item">
+                <div class="shadow-effect">
+                    <img class="img-circle" src="assets/images/logo.gif" alt="ankurgupta">
+                    <h2>Sayalay Karuna</h2>
+                    <p class="title">Founder</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="shadow-effect">
+                    <img class="img-circle" src="assets/images/person.jpg" alt="ankurgupta">
+                    <h2>Kohn Liu</h2>
+                    <p class="title">Co-Founder</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="shadow-effect">
+                    <img class="img-circle" src="assets/images/anush.jpg" alt="ankurgupta">
+                    <h2>Anush Hada</h2>
+                    <p class="title">Web Designer</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!--TEAMS SECTION ENDS-->
 <!--COUNTER SECTION-->
 <section class="stat-impact-section section-divider">
     <div class="container">
