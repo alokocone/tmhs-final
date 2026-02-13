@@ -1,7 +1,9 @@
 (function ($) {
     "use strict";
 
-    // 1. Owl Carousel Initialization
+    /*--------------------------------------------------------------
+      1. Owl Carousel Initialization
+    --------------------------------------------------------------*/
     $(document).ready(function () {
         if ($(".owl-carousel.sliders").length) {
             $(".owl-carousel.sliders").owlCarousel({
@@ -27,26 +29,36 @@
         }
     });
 
-    // 2. Scroll Events (Combined Logic)
+
+    /*--------------------------------------------------------------
+      2. Scroll & Sticky Header Logic
+    --------------------------------------------------------------*/
     $(window).on("scroll", function () {
         var scrollTop = $(window).scrollTop();
 
-        // Sticky Header Logic
+        // Standard Sticky Menu
         if ($(".stricked-menu").length) {
             var headerScrollPos = 130;
-            var stricky = $(".stricked-menu");
             if (scrollTop > headerScrollPos) {
-                stricky.addClass("stricky-fixed");
+                $(".stricked-menu").addClass("stricky-fixed");
             } else {
-                stricky.removeClass("stricky-fixed");
+                $(".stricked-menu").removeClass("stricky-fixed");
             }
         }
 
-        // Scroll to Top Visibility Toggle
+        // One Page Sticky Menu
+        if ($(".sticky-header--one-page").length) {
+            var onePageScrollPos = 130;
+            if (scrollTop > onePageScrollPos) {
+                $(".sticky-header--one-page").addClass("active");
+            } else {
+                $(".sticky-header--one-page").removeClass("active");
+            }
+        }
+
+        // Scroll to Top Toggle
         if ($(".scroll-to-top").length) {
             if (scrollTop > 500) {
-                // We use addClass as requested. 
-                // Note: Removed .fadeIn() to prevent it from adding "display:block" which breaks CSS transitions
                 $(".scroll-to-top").addClass("is-visible");
             } else {
                 $(".scroll-to-top").removeClass("is-visible");
@@ -54,12 +66,22 @@
         }
     });
 
-    // 3. Mobile Nav Logic (Cloning & Toggling)
+    /*--------------------------------------------------------------
+      3. Mobile Navigation & Sub-menus
+    --------------------------------------------------------------*/
+    // Clone Nav Content
     if ($(".mobile-nav__container").length && $(".main-menu__list").length) {
         let navContent = $(".main-menu__list").get(0).outerHTML;
         $(".mobile-nav__container").html(navContent);
     }
 
+    // Sticky Header Clone
+    if ($(".sticky-header__content").length && $(".main-menu").length) {
+        let navContent = $(".main-menu").html();
+        $(".sticky-header__content").html(navContent);
+    }
+
+    // Toggle Wrapper
     if ($(".mobile-nav__toggler").length) {
         $(".mobile-nav__toggler").on("click", function (e) {
             e.preventDefault();
@@ -68,7 +90,7 @@
         });
     }
 
-    // 4. Mobile Sub-menu Toggle
+    // Dropdown Toggler Creation
     if ($(".mobile-nav__container .main-menu__list").length) {
         $(".mobile-nav__container .main-menu__list .dropdown > a").each(function () {
             let self = $(this);
@@ -77,7 +99,7 @@
             toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
             self.append(toggleBtn);
 
-            self.find("button").on("click", function (e) {
+            $(toggleBtn).on("click", function (e) {
                 e.preventDefault();
                 $(this).toggleClass("expanded");
                 $(this).parent().parent().toggleClass("expanded");
@@ -86,81 +108,93 @@
         });
     }
 
-
-
     /*--------------------------------------------------------------
-    Sticky Header Handler
-  --------------------------------------------------------------*/
+      4. Search Popup Logic
+    --------------------------------------------------------------*/
+    $(document).on("click", ".search-toggler", function (e) {
+        e.preventDefault();
+        $("body").addClass("search-active");
+        setTimeout(() => {
+            const input = document.querySelector('.search-popup input[type="search"]');
+            if (input) input.focus();
+        }, 500);
+    });
 
-
-    // Sticky header
-    if ($(".sticky-header__content").length) {
-        let navContent = $(".main-menu").html();
-        let mobileNavContainer = $(".sticky-header__content");
-        mobileNavContainer.html(navContent);
-    }
-
-
-    const handleStickyHeader = throttle(function () {
-        try {
-            const $strickedMenu = $(".stricked-menu");
-            const $stickyHeaderOnePage = $(".sticky-header--one-page");
-            const headerScrollPos = 300;
-            const onePageScrollPos = 130;
-            const scrollTop = $window.scrollTop();
-
-            // Regular sticky header
-            if ($strickedMenu.length) {
-                if (scrollTop > headerScrollPos) {
-                    $strickedMenu.addClass("stricky-fixed");
-                } else {
-                    $strickedMenu.removeClass("stricky-fixed");
-                }
+    $('#customers-teams').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots: false,
+        autoplayTimeout: 4500,
+        checkVisibility: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1170: {
+                items: 4
             }
-
-            // One page sticky header
-            if ($stickyHeaderOnePage.length) {
-                if (scrollTop > onePageScrollPos) {
-                    $stickyHeaderOnePage.addClass("active");
-                } else {
-                    $stickyHeaderOnePage.removeClass("active");
-                }
-            }
-        } catch (error) {
-            console.warn('Sticky header handling failed:', error);
         }
-    }, 16);
-    
-
-    // Inside your click listener
-if (searchBtn) {
-    event.preventDefault();
-    document.body.classList.add('search-active');
-    
-    // Focus the input after a short delay (to allow the slide animation)
-    setTimeout(() => {
-        const input = document.querySelector('.search-popup input[type="search"]');
-        if (input) input.focus();
-    }, 500); 
-}
-
-function openTab(evt, tabName) {
-  // 1. Hide all tab content
-  const contents = document.getElementsByClassName("tab-content");
-  for (let content of contents) {
-    content.classList.remove("active");
-  }
-
-  // 2. Remove "active" class from all buttons
-  const links = document.getElementsByClassName("nav-link");
-  for (let link of links) {
-    link.classList.remove("active");
-  }
-
-  // 3. Show current tab and add active class to the button
-  document.getElementById(tabName).classList.add("active");
-  evt.currentTarget.classList.add("active");
-}
+    });
 
 })(jQuery);
 
+/*--------------------------------------------------------------
+  5. Native JS Features (Outside jQuery)
+--------------------------------------------------------------*/
+
+// Tabs Logic
+function openTab(evt, tabName) {
+    const contents = document.getElementsByClassName("tab-content");
+    for (let content of contents) {
+        content.classList.remove("active");
+    }
+    const links = document.getElementsByClassName("nav-link");
+    for (let link of links) {
+        link.classList.remove("active");
+    }
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+
+// Stats Counter with Intersection Observer
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.run-counter');
+
+    const animateCounter = (canvas) => {
+        const target = +canvas.getAttribute('data-target');
+        const duration = 1500;
+        const increment = target / (duration / 16);
+
+        let current = 0;
+        const update = () => {
+            current += increment;
+            if (current < target) {
+                canvas.innerText = Math.ceil(current);
+                requestAnimationFrame(update);
+            } else {
+                canvas.innerText = target;
+            }
+        };
+        update();
+    };
+
+    const observerOptions = {
+        threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(c => observer.observe(c));
+});

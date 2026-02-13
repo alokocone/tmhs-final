@@ -87,7 +87,7 @@
         <div class="section-header-flex">
             <div class="section-header-text">
                 <h6 class="section-tag text-white">Know what's coming</h6>
-                <h2 class="display-title">events & <span>News</span></h2>
+                <h2 class="display-title text-white">events & <span>News</span></h2>
             </div>
             <div class="main-menu__btn-box alt-button mt-3">
                 <a href="#" class="primary-btn">
@@ -303,6 +303,105 @@
     </div>
 </div>
 <!--PROJECTS ENDS-->
+<!--BECOME A VOLUNTEER-->
+<section class="volunteer-parallax-wrap">
+    <div class="volunteer-parallax-overlay">
+        <div class="volunteer-parallax-inner">
+            <h2 class="volunteer-parallax-title">Join Us as a Volunteer Today</h2>
+            <p class="volunteer-parallax-subtext">
+                Your dedication can spark a world of change. Connect with our community
+                to empower lives and help us build a more compassionate future.
+            </p>
+            <div class="main-menu__btn-box">
+                <a href="#" class="primary-btn">
+                    <span class="primary-btn-text">Join Now</span>
+                    <span class="primary-btn-icon-box">
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--BECOME A VOLUNTEER ENDS-->
+<section class="teams section-divider" style="width:100%;">
+    <div class="container">
+        <div class="section-header-flex">
+            <div class="section-header-text">
+                <h6 class="section-tag">Know Us</h6>
+                <h2 class="display-title">Meet our <span>Dedicated Team</span></h2>
+            </div>
+            <div class="main-menu__btn-box alt-button mt-3">
+                <a href="#" class="primary-btn">
+                    <span class="primary-btn-text">View More</span>
+                    <span class="primary-btn-icon-box">
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="customers-teams" class="owl-carousel">
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" src="assets/images/logo.gif" alt="ankurgupta">
+                            <h2>Sayalay Karuna</h2>
+                            <p class="title">Founder</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" src="assets/images/person.jpg" alt="ankurgupta">
+                            <h2>Kohn Liu</h2>
+                            <p class="title">Co-Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--COUNTER SECTION-->
+<section class="stat-impact-section section-divider">
+    <div class="container">
+        <div class="section-header-flex justify-content-center">
+            <div class="section-header-text">
+                <h2 class="display-title">have a look at our <span>stats!</span></h2>
+            </div>
+        </div>
+        <div class="stat-impact-container">
+            <div class="stat-impact-grid">
+                <div class="stat-impact-item">
+                    <div class="stat-impact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="stat-impact-number"><span class="run-counter" data-target="220">220</span>K</h3>
+                    <p class="stat-impact-label">Poor Educated</p>
+                </div>
+
+                <div class="stat-impact-item">
+                    <div class="stat-impact-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3 class="stat-impact-number"><span class="run-counter" data-target="95">600</span>M+</h3>
+                    <p class="stat-impact-label">Fund Raised</p>
+                </div>
+
+                <div class="stat-impact-item">
+                    <div class="stat-impact-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3 class="stat-impact-number"><span class="run-counter" data-target="150">1110</span>K</h3>
+                    <p class="stat-impact-label">Team Members</p>
+                </div>
+
+                <div class="stat-impact-item">
+                    <div class="stat-impact-icon"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                    <h3 class="stat-impact-number"><span class="run-counter" data-target="32">100000</span>M+</h3>
+                    <p class="stat-impact-label">Donations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--COUNTER SECTION ENDS-->
 <!--MOBILE NAV WRAPPER-->
 <div class="mobile-nav__wrapper">
     <div class="mobile-nav__overlay mobile-nav__toggler">
